@@ -1,0 +1,26 @@
+:root {
+    --grid-cols: 3;
+    --grid-rows: 3;
+  }
+
+body{
+    display: flex;
+    margin-top:10%;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    border:1px pink solid;
+    width: 480px;
+    height:500px;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), auto);
+    grid-template-columns: repeat(var(--grid-cols), auto);
+}
+
+.grid-item {
+    width:auto;
+    height:auto;
+    /* text-align: center; */
+} 
