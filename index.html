@@ -3,13 +3,21 @@
     <head>
         <title>Etch-A-Sketch</title>
         <link type='text/css' rel='stylesheet' href='styles.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>Etch-A-Sketch</h1>
-        <div id='test'>
+        <div id='content'>
             <div id='input'>
-                <p>Please select the pixel size:</p>
-                <input type='range' min = '2' max = '64' value='16' class='slider' id='myRange'>
+                <h3>Welcome to the etch-a-sketch game</h3>
+                <button class='btn' id = 'colorBtn'>Colour Mode</button>
+                <button class='btn' id = 'rainbowBtn'>Rainbow</button>
+                <button class='btn' id = 'eraserBtn'>Eraser</button>
+                <button class='btn' id = 'clearBtn'>Clear</button>
+                <p id ='displayVal'><span id = 'val'>16</span> x <span class ='val'>16</span></p>
+                <input type='range' min = '2' max = '64' value='16' class='slider' id='range'>
             </div> 
             <div id='center'>
                 <div id='container'>
