@@ -3,7 +3,7 @@
     --grid-rows: 3;
   }
 
-body{
+h1, #center{
     display: flex;
     margin-top:10%;
     justify-content: center;
@@ -22,5 +22,20 @@ body{
 .grid-item {
     width:auto;
     height:auto;
-    /* text-align: center; */
 } 
+
+#center{
+    margin-top:-5px;
+}
+
+#test{
+display:flex;
+justify-content:center;
+margin-left:-16rem;
+}
+
+#input{
+    margin-right: 5rem;
+    border:1px solid black;
+    background-color:gray;
+}
