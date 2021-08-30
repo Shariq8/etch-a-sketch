@@ -56,7 +56,35 @@ h1, #center{
     height:41px;
     padding:10px 20px;
 }
-
+.btn:hover{
+    filter: brightness(90%);
+}
 #range{
     margin-top:-2rem;
+}
+
+#color {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    height: 50px;
+  }
+
+.colorBtn {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background: #333;
+    border: 1px solid grey;
+}
+  
+  
+.colorBtn:hover, 
+#color:focus + .colorBtn {
+border-color: rgb(47, 47, 84);
+}
+
+#color:active + .colorBtn {
+filter: brightness(90%);
 }

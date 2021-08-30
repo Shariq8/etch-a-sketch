@@ -1,5 +1,9 @@
 // const container = document.getElementById("container");
 const container = document.querySelector("#container");
+const colorBlock = document.querySelector('#color');
+const colorSubmit = document.querySelector('#colorBtn');
+const eraser = document.querySelector('#eraserBtn');
+
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -10,15 +14,28 @@ function makeRows(rows, cols) {
     container.appendChild(cell).className = "grid-item";
   };
 };
-// makeRows(2,2);
-// makeRows(16,16);
-makeRows(64,64);
+makeRows(16,16);
+color(`#333`);
 
-var blocks = document.querySelectorAll('.grid-item');
-blocks.forEach(block => block.addEventListener('mouseover', event =>{
-    block.setAttribute('style', 'background-color:black');
-}))
 
+colorBlock.addEventListener('input', () => {
+  document.querySelector('label').style.background = colorBlock.value;
+});
+
+colorSubmit.addEventListener('click', () =>{
+  color(`${colorBlock.value}`);
+});
+
+eraser.addEventListener('click', () =>{
+  color('none');
+});
+
+function color(colorChoice){
+  var blocks = document.querySelectorAll('.grid-item');
+  blocks.forEach(block => block.addEventListener('mouseover', event =>{
+    block.setAttribute('style', `background-color:${colorChoice}`);
+  }))
+}
 
 
 
