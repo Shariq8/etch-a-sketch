@@ -21,9 +21,12 @@ makeRows(16,16);
 color(`#333`);
 
 slider.addEventListener('input', () =>{
-  const blocks = document.querySelectorAll('.grid-item');
   const val = document.querySelectorAll('span');
   val.forEach(values => values.textContent = slider.value);
+});
+
+slider.addEventListener('change', () =>{
+  const blocks = document.querySelectorAll('.grid-item');
   blocks.forEach(block => block.remove('.grid-item'));
   makeRows(slider.value,slider.value);
 });
