@@ -1,1 +1,1 @@
-This is an etch a sketch file from the odin project
+This is an etch a sketch file from the odin project. It's a colour format game which allows you to draw on a pixelated canvas. The colours can be changed manually using RGB but can also be changed in different modes (colour mode and rainbow). 
